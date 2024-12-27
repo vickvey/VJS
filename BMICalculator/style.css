@@ -1,0 +1,125 @@
+/* Root colors */
+:root {
+    --rich-black: #0d1b2a;
+    --oxford-blue: #1b263b;
+    --yinmn-blue: #415a77;
+    --silver-lake-blue: #778da9;
+    --platinum: #e0e1dd;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--rich-black); /* Dark background */
+    color: var(--platinum); /* Light text color for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container */
+.container {
+    background-color: var(--platinum); /* Light background for the container */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Heading */
+.heading {
+    color: var(--oxford-blue); /* Primary color for the heading */
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Form */
+.bmi-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Form Input Fields */
+.form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+input[type="text"] {
+    padding: 0.8rem;
+    border: 1px solid var(--silver-lake-blue); /* Subtle border */
+    border-radius: 5px;
+    font-size: 1rem;
+    color: var(--oxford-blue); /* Darker text color for input */
+    background-color: var(--platinum); /* Light background for inputs */
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: var(--yinmn-blue); /* Highlight border color on focus */
+    outline: none;
+}
+
+/* Buttons */
+button {
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: var(--platinum); /* Light text */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"] {
+    background-color: var(--yinmn-blue); /* Primary button background */
+}
+
+button[type="submit"]:hover {
+    background-color: var(--oxford-blue); /* Darker button on hover */
+}
+
+#reload {
+    background-color: var(--silver-lake-blue); /* Secondary button */
+}
+
+#reload:hover {
+    background-color: var(--yinmn-blue); /* Change to blue on hover */
+}
+
+/* Result Section */
+.bmi-result {
+    margin-top: 2rem;
+    color: var(--oxford-blue); /* Darker text for results */
+}
+
+.bmi-result h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.bmi-val {
+    color: var(--yinmn-blue); /* Accent color for BMI value */
+}
+
+.bmi-msg {
+    font-weight: bold;
+}
+
+.bmi-result p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}

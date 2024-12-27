@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>BMI Calculator | VanillaJS</title>
+</head>
+<body>
+    <div class="container">
+        <h2 class="heading">BMI Calculator</h2>
+        <form class="bmi-form">
+            <div class="form-content">
+                <label for="weight">Weight (in kgs)</label>
+                <input type="text" id="weight" name="weight" placeholder="Enter your weight (in kilograms)" required>
+            </div>
+            <div class="form-content">
+                <label for="height">Height (in cms)</label>
+                <input type="text" id="height" name="height" placeholder="Enter your height (in centimeters)" required>
+            </div>
+            <div class="form-content">
+                <button type="submit">Submit</button>
+                <button class="reload">Reload</button>
+            </div>
+        </form>
+        <div class="bmi-result">
+            <h3>Your BMI is: <span class="bmi-val">23</span></h3>
+            <p>You are <span class="bmi-msg">Normal Weight</span>.</p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
