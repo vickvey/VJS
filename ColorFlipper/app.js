@@ -31,11 +31,11 @@ colorChangeBtn.addEventListener("click", function (e) {
 });
 
 simpleNavBtn.addEventListener("click", function (e) {
-  e.preventDefault();
+  // e.preventDefault();
   simpleState = true;
 });
 
 complexNavBtn.addEventListener("click", function (e) {
-  e.preventDefault();
+  // e.preventDefault();
   simpleState = false;
 });
