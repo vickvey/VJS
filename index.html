@@ -8,7 +8,7 @@
         /* Global styles */
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f4f7f6;
+            background-color: #f1f5f8;
             margin: 0;
             padding: 0;
             display: flex;
@@ -17,52 +17,71 @@
             align-items: center;
             min-height: 100vh;
             color: #333;
+            box-sizing: border-box;
         }
 
         h1 {
             font-size: 2.5rem;
             color: #2c3e50;
             margin-bottom: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         ul {
             list-style: none;
             padding: 0;
+            margin: 0;
         }
 
         li {
-            margin: 10px 0;
+            margin: 15px 0;
         }
 
         a {
             text-decoration: none;
             color: #3498db;
             font-size: 1.2rem;
-            font-weight: bold;
-            transition: color 0.3s ease;
+            font-weight: 500;
+            transition: color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #ecf0f1;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
         }
 
         a:hover {
             color: #1abc9c;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-4px);
         }
 
-        /* Add some spacing and box shadow for visual appeal */
-        ul li a {
-            padding: 10px 20px;
-            background-color: #ecf0f1;
-            border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: box-shadow 0.3s ease, transform 0.3s ease;
-        }
-
-        ul li a:hover {
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-            transform: translateY(-2px);
-        }
-
-        /* Centering and styling the container */
+        /* Container styling */
         .container {
             text-align: center;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            margin: 20px;
+        }
+
+        /* Adding a subtle background effect */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            z-index: -1;
         }
 
         /* Mobile responsiveness */
@@ -73,8 +92,28 @@
 
             a {
                 font-size: 1rem;
+                padding: 10px 16px;
+            }
+
+            .container {
+                padding: 30px;
             }
         }
+
+        /* Adding smooth fade-in animation */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .container {
+            animation: fadeIn 1s ease-out;
+        }
+
     </style>
 </head>
 <body>
