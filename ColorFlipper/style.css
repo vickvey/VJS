@@ -1,0 +1,83 @@
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #212121;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 12vh 80vh 8vh;
+    grid-template-columns: 100vw;
+}
+
+header {
+    background-color: yellowgreen;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: repeat(2, 50%);
+}
+
+header h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    padding-left: 2vw;
+    align-self: center;
+}
+
+header nav {
+    padding-right: 2vw;
+    justify-self: flex-end;
+    align-self: center;
+}
+
+nav button {
+    background-color: lightcyan;
+    color: purple;
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 1vw;
+}
+
+main {
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-info {
+    background-color: #212121;
+    color: #fff;
+    padding: 20px;
+    border-radius: 7px;
+}
+
+#color-change-btn {
+    margin-top: 10px;
+    padding: 10px;
+    align-self: center;
+    justify-self: center;
+}
+
+footer {
+    background-color: palevioletred;
+    color: moccasin;
+    
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+footer a {
+    color: yellow;
+    padding: 5px;
+    text-decoration: none;
+}
+
